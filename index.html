@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Js</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css links -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaquary.css">
+</head>
+<body>
+    <!-- text change -->
+    <div class="container mt-5">
+        <h1 class="text-danger">Click the button to change the text</h1> 
+        <button type="button" class="btn btn-dark my-2" onclick="textChange()">Text Change</button> 
+        <h2 id="h2"></h2>      
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">oncontextmenu</h1> 
+        <button type="button" class="btn btn-dark my-2" oncontextmenu="textChange2()">oncontextmenu right-click-me</button> 
+        <h2 id="h2nd"></h2>        
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">Click the button to change the text</h1> 
+        <button type="button" class="btn btn-dark my-2" ondblclick="textChange3()">ondblclick</button> 
+        <h2 id="h2rd"></h2>        
+    </div>
+
+    <!-- show date -->
+    <div class="container mt-5">
+        <h1 class="text-danger">Click the button to show the date</h1> 
+        <button type="button" class="btn btn-dark my-2" onclick="showDate()">Show Date</button> 
+        <h2 id="dh2">Date</h2>        
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">onmouseleave</h1> 
+        <button type="button" class="btn btn-dark my-2" onmouseleave="showDate2()">Show Date</button> 
+        <h2 id="dh2nd">Date</h2>        
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">onmousemove</h1> 
+        <button type="button" class="btn btn-dark my-2" onmousemove="showDate3()">Show Date</button> 
+        <h2 id="dh2rd">Date</h2>        
+    </div>
+
+    <!-- variable repeat massage -->
+    <div class="container mt-5">
+        <h1 class="text-danger">Click the button to repeat the massage</h1> 
+        <button type="button" class="btn btn-dark my-2" onclick="dataRepeat()">Repeat massage</button> 
+        <h2 id="dr"></h2>        
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">onmouseover</h1> 
+        <button type="button" class="btn btn-dark my-2" onmouseover="dataRepeat2()">Repeat massage</button> 
+        <h2 id="dr2"></h2>        
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">onmouseout</h1> 
+        <button type="button" class="btn btn-dark my-2" onmouseout="dataRepeat3()">Repeat massage</button> 
+        <h2 id="dr2rd"></h2>        
+    </div>
+
+    <!-- on/off -->
+    <div class="container mt-5">
+        <h1 class="text-danger">Click the button to turn on/off bulb</h1> 
+        <button type="button" class="btn btn-success my-2" onclick="bulbOn()">On</button> 
+        <button type="button" class="btn btn-dark my-2" onclick="bulbOff()">Off</button> 
+        <img id="bulb" src="img/off.gif" alt="js">         
+    </div>
+
+
+    <!-- font-size -->
+    <div class="container mt-5">
+        <h1 class="text-danger">Click the button to change the font size</h1> 
+        <button type="button" class="btn btn-dark my-2" onclick="fontSize()">Font Size</button> 
+        <h2 id="fs">Lorem ipsum dolor sit.</h2>         
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">onmouseenter font size</h1> 
+        <button type="button" class="btn btn-dark my-2" onmouseenter="fontSize2()">Font Size</button> 
+        <h2 id="fs2">Lorem ipsum dolor sit.</h2>         
+    </div>
+
+    <!-- show/hide -->
+    <div class="container mt-5">
+        <h1 class="text-danger">Click the button to show or hide the text</h1> 
+        <button type="button" class="btn btn-success my-2" onclick="textShow()">Show</button> 
+        <button type="button" class="btn btn-dark my-2" onclick="textHide()">Hide</button> 
+        <h2 id=tsh>Lorem, ipsum dolor sit amet.</h2>         
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">Addition function</h1> 
+        <button type="button" class="btn btn-dark my-2" onclick="outPut()">Result</button> 
+        <h2 id="op"></h2>         
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">Subtraction function</h1> 
+        <button type="button" class="btn btn-dark my-2" onclick="subTract()">Result</button> 
+        <h2 id="sf"></h2>        
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">Multiplication function</h1> 
+        <button type="button" class="btn btn-dark my-2" onclick="multiFun()">Multiply 7</button> 
+        <h2 id="multi"></h2>        
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">Division Function</h1> 
+        <button type="button" class="btn btn-dark my-2" onclick="divideFun()">Divide 7</button> 
+        <h2 id="df"></h2>       
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">getElementByClassName</h1> 
+        <button type="button" class="btn btn-dark my-2" onclick="test()">Click me</button> 
+        <p class="p">Hello There!</p>       
+        <p class="p">Hello There!</p>       
+        <p class="p">Hello There!</p>       
+    </div>
+
+
+    <div class="container mt-5">
+        <form>  
+            Male: <input type="radio" name="gender" value="male">  
+            Female: <input type="radio" name="gender" value="female">  
+            <input type="button" onclick="totalElements()" value="Total Genders">  
+        </form>       
+    </div>
+
+    <div class="container mt-5">
+        <p>This is a paragraph</p>  
+        <p>Here we are going to count the total number of paragraphs using the getElementByTagName() method.</p>  
+        <p>Let's see the simple example</p>  
+        <button onclick="countPara()">Count Paragraphs</button>        
+    </div>
+
+    <div class="container mt-5">
+        <h2>This is h2 tag</h2>  
+        <h2>This is h2 tag</h2>  
+        <h3>This is h3 tag</h3>  
+        <h3>This is h3 tag</h3>  
+        <h3>This is h3 tag</h3>  
+
+        <button onclick="counth2()">Count h2</button>
+        <button onclick="counth3()">Count h3</button>        
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">getElementById</h1> 
+        <p>When you click on one of the buttons, a function will be called. The function will display the argument that is passed to it.</p>
+
+        <form> 
+          <input type="button" onclick="myfunction('Good Morning!')" value="In the Morning"> 
+          <input type="button" onclick="myfunction('Good Evening!')" value="In the Evening"> 
+        </form> 
+        
+        <p id="demo"></p>        
+    </div>
+
+
+
+    <div class="container mt-5">
+        <p>This is an example of adding multiple events to the same element.</p>
+        <p>Click the following button to see the effect.</p>
+        <button class="mb-3">Click me</button>
+        <p id="para"></p>
+        <p id="para1"></p>        
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-danger">click the button to show alert</h1> 
+        <button type="button" id="btn" class="btn btn-dark">Show Alert</button>       
+    </div>
+
+
+    <div class="container mt-5 mb-5">
+        <h1 class="text-danger">click the button to hide/show to button</h1>
+        <button id="btnh" class="button" class="btn btn-dark">fadeOut</button>
+        <button id="btns" class="button" class="btn btn-danger">fadeIn</button>
+        <button id="btnt" class="button" class="btn btn-warning">fadeToggle</button>
+        <h2>Lorem ipsum dolor sit.</h2>       
+    </div>
+
+    <!-- ajaxComplete event -->
+    <div class="container">
+        <h1 class="text-danger">ajaxComplete event</h1>
+        <button type="button" class="btn btn-dark trigger">Trigger</button>
+        <div class="result"></div>
+        <div class="log"></div>
+    </div>
+
+    <!-- I will disappear -->
+    <div class="container">
+        <p>If you click on me, I will disappear.</p>
+        <p>Click me away!</p>
+        <p>Click me too!</p>
+    </div>
+
+    <section>
+        <!-- show/hide -->
+        <div class="container mb-5">
+            <div class="show1 ques">
+                <div class="container mt-3">
+                  <h2>Rounded Corners</h2>          
+                  <img src="img/Number (1).jpg" class="rounded" alt="Cinque Terre" width="304" height="236">
+                </div>
+            </div>
+            <div class="show2 ans">
+                <div>
+                    <div class="container mt-3">
+                      <h2>Rounded Corners</h2>
+                      <img src="img/Number (1).jpg" class="rounded" alt="Cinque Terre" width="304" height="236">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enter this paragraph. -->
+    <div class="container mt-5 mb-5">
+        <p id="p1" class="bg-warning">Enter this paragraph.</p>
+    </div>
+
+    <!-- This is a paragraph. -->
+    <div class="container mt-5 mb-5">
+        <p id="p1" class="bg-warning">This is a paragraph.</p>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <p id="p1" class="bg-warning">This is a paragraph.</p>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <p id="p1" class="bg-warning">This is a paragraph.</p>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <p id="p1"  class="bg-warning">This is a paragraph.</p>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        Name: <input type="text" name="fullname"><br>
+        Email: <input type="text" name="email">
+    </div>
+
+
+    <div class="container mt-5 mb-5">
+        <p>Click or move the mouse pointer over this paragraph.</p>
+    </div>
+
+    <div class="container">
+        <input type="text" value="Hello World"><br><br>
+
+        <button>Trigger the select event for the input field</button>
+
+        <p>Notice that, unlike the trigger() method, the triggerHandler() method does not cause the default behavior of the event to occur (The text is not marked).</p>
+    </div>
+
+    <div class="container">
+        <p>Click this paragraph to change its background color.</p>
+        <p>Click the button below and then click on this paragraph (the click event is removed).</p>
+
+        <button>Remove the click event handler</button>
+    </div>
+
+    <div class="container">
+        <div>
+            <p>Click this paragraph.</p>
+        </div>
+    </div>
+
+    <!-- scrollbar in the div -->
+    <div class="container">
+        <p>Try the scrollbar in the div</p>
+        <div class="part1">In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
+        <br><br>
+        'Whenever you feel like criticizing anyone,' he told me, just remember that all the people in this world haven't had the advantages that you've had.'
+        </div>
+        <p>Scrolled <span>0</span> times.</p>
+    </div>
+
+    <div class="container">
+        <input type="text" value="Hello World">
+        <p>Select some text inside the input field.</p>
+    </div>  
+
+    <!-- Submit -->
+    <div class="container">
+        <form action="">
+          First name: <input type="text" name="FirstName" value="Mickey"><br>
+          Last name: <input type="text" name="LastName" value="Mouse"><br>
+          <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div class="container">
+        <input type="text" value="Hello World"><br><br>
+
+        <button>Trigger the select event for the input field</button>
+    </div>
+
+    <!-- Run test function -->
+    <div class="vontainer">
+        <button>Run test function</button>
+
+        <p></p>
+    </div>
+    <!-- ques/ans -->
+    <div class="container mb-5 mt-5">
+        <div class="ques">
+            <h1 class="mb-0">Lorem ipsum dolor sit amet.</h1>
+        </div>
+        <div class="ans">
+            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum exercitationem neque quae eum modi? Eos consequuntur obcaecati, perspiciatis et ipsam assumenda, velit, dicta earum necessitatibus, quia minima rem vero nihil.</p>
+        </div>
+    </div>
+
+    <div class="container mb-5 bt-5">
+        <div id="draggable" class="ui-widget-content">
+        <h1 class="p_left">Drag me around</h1>
+          <div class="m-auto mt-2" id="triangle-right"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="accordion">
+        <!-- item -->
+          <h3>Section 1</h3>
+          <div>
+            <p>
+            Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+            ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+            amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+            odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+            </p>
+          </div>
+
+          <!-- item 2 -->
+          <h3>Section 2</h3>
+          <div>
+            <p>
+            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+            purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+            velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+            suscipit faucibus urna.
+            </p>
+          </div>
+
+
+          <!-- item 3 -->
+          <h3>Section 3</h3>
+          <div>
+            <p>
+            Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+            Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+            ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+            lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+            </p>
+            <ul>
+              <li>List item one</li>
+              <li>List item two</li>
+              <li>List item three</li>
+            </ul>
+          </div>
+
+          <!-- item 4 -->
+          <h3>Section 4</h3>
+          <div>
+            <p>
+            Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+            et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+            faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+            mauris vel est.
+            </p>
+            <p>
+            Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos.
+            </p>
+          </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <ul id="sortable">
+          <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+          <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+          <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+          <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+          <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+          <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+          <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+        </ul>
+    </div>
+    <br>
+    <div class="container mt-5 mb-5">
+        <div class="widget">
+          <h1>Widget Buttons</h1>
+          <button>A button element</button>
+         
+          <input type="submit" value="A submit button">
+         
+          <a href="#">An anchor</a>
+        </div>
+        <h1>CSS Buttons</h1>
+        <button class="ui-button ui-widget ui-corner-all">A button element</button>
+         
+        <input class="ui-button ui-widget ui-corner-all" type="submit" value="A submit button">
+         
+        <a class="ui-button ui-widget ui-corner-all" href="#">An anchor</a>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <div class="ui-widget">
+          <label for="tags">Tags: </label>
+          <input id="tags">
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <p>Date: <input type="text" id="datepicker"></p>
+    </div>  
+
+    <div class="container mt-5 mb-5">
+        <p><a href="#" title="That&apos;s what this widget is">Tooltips</a> can be attached to any element. When you hover
+        the element with your mouse, the title attribute is displayed in a little box next to the element, just like a native tooltip.</p>
+        <p>But as it&apos;s not a native tooltip, it can be styled. Any themes built with
+        <a href="http://jqueryui.com/themeroller/" title="ThemeRoller: jQuery UI&apos;s theme builder application">ThemeRoller</a>
+        will also style tooltips accordingly.</p>
+        <p>Tooltips are also useful for form elements, to show some additional information in the context of each field.</p>
+        <p><label for="age">Your age:</label><input id="age" title="We ask for your age only for statistical purposes."></p>
+        <p>Hover the field to see the tooltip.</p>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <div id="tabs">
+          <ul>
+            <li><a href="#tabs-1">Nunc tincidunt</a></li>
+            <li><a href="#tabs-2">Proin dolor</a></li>
+            <li><a href="#tabs-3">Aenean lacinia</a></li>
+          </ul>
+          <div id="tabs-1">
+            <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+          </div>
+          <div id="tabs-2">
+            <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+          </div>
+          <div id="tabs-3">
+            <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+            <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+          </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <div class="demo">
+            <form action="#">
+              <fieldset>
+                <label for="speed">Select a speed</label>
+                <select name="speed" id="speed">
+                  <option>Slower</option>
+                  <option>Slow</option>
+                  <option selected="selected">Medium</option>
+                  <option>Fast</option>
+                  <option>Faster</option>
+                </select>
+             
+                <label for="files">Select a file</label>
+                <select name="files" id="files">
+                  <optgroup label="Scripts">
+                    <option value="jquery">jQuery.js</option>
+                    <option value="jqueryui">ui.jQuery.js</option>
+                  </optgroup>
+                  <optgroup label="Other files">
+                    <option value="somefile">Some unknown file</option>
+                    <option value="someotherfile">Some other file with a very long option text</option>
+                  </optgroup>
+                </select>
+             
+                <label for="number">Select a number</label>
+                <select name="number" id="number">
+                  <option>1</option>
+                  <option selected="selected">2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                  <option>11</option>
+                  <option>12</option>
+                  <option>13</option>
+                  <option>14</option>
+                  <option>15</option>
+                  <option>16</option>
+                  <option>17</option>
+                  <option>18</option>
+                  <option>19</option>
+                </select>
+             
+                <label for="salutation">Select a title</label>
+                <select name="salutation" id="salutation">
+                  <option disabled selected>Please pick one</option>
+                  <option>Mr.</option>
+                  <option>Mrs.</option>
+                  <option>Dr.</option>
+                  <option>Prof.</option>
+                  <option>Other</option>
+                </select>
+              </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <div class="container mb-5 mt-5">
+        <ul id="menu">
+          <li class="ui-state-disabled"><div>Toys (n/a)</div></li>
+          <li><div>Books</div></li>
+          <li><div>Clothing</div></li>
+          <li><div>Electronics</div>
+            <ul>
+              <li class="ui-state-disabled"><div>Home Entertainment</div></li>
+              <li><div>Car Hifi</div></li>
+              <li><div>Utilities</div></li>
+            </ul>
+          </li>
+          <li><div>Movies</div></li>
+          <li><div>Music</div>
+            <ul>
+              <li><div>Rock</div>
+                <ul>
+                  <li><div>Alternative</div></li>
+                  <li><div>Classic</div></li>
+                </ul>
+              </li>
+              <li><div>Jazz</div>
+                <ul>
+                  <li><div>Freejazz</div></li>
+                  <li><div>Big Band</div></li>
+                  <li><div>Modern</div></li>
+                </ul>
+              </li>
+              <li><div>Pop</div></li>
+            </ul>
+          </li>
+          <li class="ui-state-disabled"><div>Specials (n/a)</div></li>
+        </ul>
+    </div>
+
+    <div class="container mb-5 mt-5">
+        <div class="widget">
+          <h1>Widget Buttons</h1>
+          <button>A button element</button>
+          <input type="submit" value="A submit button">
+          <a href="#">An anchor</a>
+        </div>
+        <br>
+        <br>
+        <h1>CSS Buttons</h1>
+        <button class="ui-button ui-widget ui-corner-all">A button element</button>
+        <input class="ui-button ui-widget ui-corner-all" type="submit" value="A submit button">
+        <a class="ui-button ui-widget ui-corner-all" href="#">An anchor</a>
+    </div>
+
+    <div class="container mb-5 mt-5">
+        <div class="toggler">
+          <div id="effect" class="ui-corner-all">
+              Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede.
+          </div>
+        </div>
+        <button id="button" class="ui-state-default ui-corner-all">Run Effect</button>
+    </div>
+
+    <div class="container">
+        <div class="toggler">
+          <div id="effect" class="newClass ui-corner-all">
+            Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede.
+          </div>
+        </div>
+        <button id="button" class="ui-state-default ui-corner-all">Run Effect</button>
+    </div>  
+
+    <div class="container">
+        <div class="toggler">
+          <div id="effect" class="newClass ui-corner-all">
+              Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede.
+          </div>
+        </div>
+        <button id="button" class="ui-state-default ui-corner-all">Run Effect</button>
+    </div>
+
+    <!-- js links -->
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
